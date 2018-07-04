@@ -4,6 +4,8 @@ const path = require("path");
 module.exports = {
   mode: "development",
 
+  entry: "./lib/index.js",
+
   resolve: { alias: { lib: path.join(__dirname, "lib") } },
 
   module: {
@@ -39,5 +41,15 @@ module.exports = {
     __filename: true
   },
 
-  entry: "./lib/index.js"
+  devServer: {
+    noInfo: false,
+    quiet: false,
+    watchOptions: {
+      aggregateTimeout: 20
+    },
+    headers: {
+      "Access-Control-Allow-Origin": "*"
+    },
+    disableHostCheck: true
+  }
 };
