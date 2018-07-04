@@ -1,6 +1,9 @@
+const path = require("path");
+
 module.exports = {
-  entry: "./lib/index.js",
   mode: "development",
 
-  target: "node"
+  resolve: { alias: { lib: path.join(__dirname, "lib") } },
+
+  entry: "./lib/index.js"
 };

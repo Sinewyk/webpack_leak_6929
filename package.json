@@ -5,13 +5,15 @@
   "license": "MIT",
   "scripts": {
     "postinstall": "cp lib/index_initial.js lib/index.js",
-    "test": "run-s watch scramble",
-    "scramble": "",
-    "watch": "node --max_old_space_size=50 node_modules/.bin/webpack --watch"
+    "test": "run-p watch scramble",
+    "scramble": "node scripts/scramble.js",
+    "watch":
+      "node --max_old_space_size=50 node_modules/.bin/webpack-dev-server --hot"
   },
   "devDependencies": {
     "webpack": "^4.14.0",
     "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4",
     "yarn-run-all": "^3.1.1"
   },
   "dependencies": {
