@@ -1,0 +1,10 @@
+{
+  "name": "webpack_leak_6929",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^4.14.0",
+    "webpack-cli": "^3.0.8"
+  }
+}
