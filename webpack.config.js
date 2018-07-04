@@ -13,5 +13,13 @@ module.exports = {
     })
   ],
 
+  node: {
+    Buffer: false,
+    process: false,
+    global: true,
+    __dirname: true,
+    __filename: true
+  },
+
   entry: "./lib/index.js"
 };
