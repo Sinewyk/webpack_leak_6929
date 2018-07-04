@@ -2,9 +2,11 @@ const fs = require("fs");
 
 const data = [
   "index_initial",
+  "index_no_scss",
   "index_no_alias",
   "index_with_error",
-  "index_require_error"
+  "index_require_error",
+  "index_with_chunk"
 ].map(x => fs.readFileSync(`./lib/${x}.js`));
 
 let i = 0;
