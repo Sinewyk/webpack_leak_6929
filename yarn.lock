@@ -1988,6 +1988,10 @@ hash.js@^1.0.0, hash.js@^1.0.3:
     inherits "^2.0.3"
     minimalistic-assert "^1.0.0"
 
+heapdump@^0.3.9:
+  version "0.3.9"
+  resolved "https://registry.yarnpkg.com/heapdump/-/heapdump-0.3.9.tgz#03c74eb0df5d67be0982e83429ba9c9d2b3b7f78"
+
 hmac-drbg@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/hmac-drbg/-/hmac-drbg-1.0.1.tgz#d2745701025a6c775a6c545793ed502fc0c649a1"

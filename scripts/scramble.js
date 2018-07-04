@@ -14,5 +14,12 @@ setInterval(function() {
     "./lib/index.js",
     Buffer.concat([data[i % data.length], Buffer.from(`\nconsole.log(${i})`)])
   );
+  fs.writeFileSync(
+    "./lib/index2.js",
+    Buffer.concat([
+      data[(i + 1) % data.length],
+      Buffer.from(`\nconsole.log(${i})`)
+    ])
+  );
   ++i;
 }, 1000);
