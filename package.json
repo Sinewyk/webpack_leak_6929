@@ -7,16 +7,20 @@
     "postinstall": "cp lib/index_initial.js lib/index.js",
     "test": "run-p watch scramble",
     "scramble": "node scripts/scramble.js",
-    "watch":
-      "node --max_old_space_size=50 node_modules/.bin/webpack-dev-server --hot"
+    "watch": "node --max_old_space_size=50 node_modules/.bin/webpack-dev-server --hot"
   },
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
     "webpack": "^4.14.0",
     "webpack-cli": "^3.0.8",
     "webpack-dev-server": "^3.1.4",
     "yarn-run-all": "^3.1.1"
   },
   "dependencies": {
+    "babel-runtime": "^6.26.0",
     "debug": "^3.1.0"
   }
 }

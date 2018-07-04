@@ -6,6 +6,24 @@ module.exports = {
 
   resolve: { alias: { lib: path.join(__dirname, "lib") } },
 
+  module: {
+    rules: [
+      // the 'transform-runtime' plugin tells babel to require the runtime
+      // instead of inlining it.
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["babel-preset-env"],
+            plugins: ["babel-plugin-transform-runtime"]
+          }
+        }
+      }
+    ]
+  },
+
   plugins: [
     new wp.NoEmitOnErrorsPlugin(),
     new wp.DefinePlugin({
