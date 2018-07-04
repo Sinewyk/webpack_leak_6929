@@ -10,6 +10,9 @@ const data = [
 let i = 0;
 
 setInterval(function() {
-  fs.writeFileSync("./lib/index.js", data[i % data.length]);
+  fs.writeFileSync(
+    "./lib/index.js",
+    Buffer.concat([data[i % data.length], Buffer.from(`\nconsole.log(${i})`)])
+  );
   ++i;
 }, 1000);
