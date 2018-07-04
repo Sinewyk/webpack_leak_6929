@@ -8,7 +8,7 @@
     "test": "run-p watch scramble",
     "test:free": "run-p watch:free scramble",
     "scramble": "node scripts/scramble.js",
-    "watch": "node --max_old_space_size=60 node_modules/.bin/webpack-dev-server --hot",
+    "watch": "node --max_old_space_size=65 node_modules/.bin/webpack-dev-server --hot",
     "watch:free": "node node_modules/.bin/webpack-dev-server --hot"
   },
   "devDependencies": {
